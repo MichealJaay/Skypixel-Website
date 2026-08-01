@@ -91,7 +91,7 @@ function YouTubeCTA() {
           </svg>
         </div>
         <span className="youtube-cta-tag">Watch more</span>
-        <h3>Youtube Channel</h3>
+        <h3>YouTube Channel</h3>
         <p>To see more of our work</p>
         <span className="youtube-cta-link">
           Open channel

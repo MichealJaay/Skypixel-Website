@@ -10,10 +10,10 @@ export default function WhySection({ features, comparisonRows }) {
           title="Why choose SkyPixels over conventional agencies?"
         />
         <div className="why-grid">
-          <div className="imgph reveal" data-src="/images/why/drone-show-corporate-event.jpg">
+          <div className="imgph reveal" data-src="/images/event-cover/heineken-cup.png">
             <img
               className="imgph-photo"
-              src="/images/why/drone-show-corporate-event.jpg"
+              src="/images/event-cover/heineken-cup.png"
               alt="Drone show corporate event"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
@@ -46,8 +46,8 @@ export default function WhySection({ features, comparisonRows }) {
                   {comparisonRows.map((row) => (
                     <tr key={row}>
                       <th>{row}</th>
-                      <td className="no">✕</td>
-                      <td className="yes">✓</td>
+                      <td className="no">x</td>
+                      <td className="yes">&#10003;</td>
                     </tr>
                   ))}
                 </tbody>

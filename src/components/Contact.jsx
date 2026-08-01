@@ -14,7 +14,7 @@ export default function Contact({ details }) {
     const service = data.get('service') || '';
     const brief = data.get('brief') || '';
 
-    const subject = `Campaign Brief — ${name || 'New enquiry'}${company ? ' / ' + company : ''}`;
+    const subject = `Campaign Brief - ${name || 'New enquiry'}${company ? ' / ' + company : ''}`;
     const body = [
       `Name: ${name}`,
       `Company: ${company}`,
@@ -28,7 +28,7 @@ export default function Contact({ details }) {
 
     window.location.href = `mailto:enquiries@skypixelsltd.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setStatus(
-      'Opening your email app to send this brief to enquiries@skypixelsltd.com — please hit send there to complete it.',
+      'Opening your email app to send this brief to enquiries@skypixelsltd.com - please hit send there to complete it.',
     );
   };
 
@@ -38,7 +38,7 @@ export default function Contact({ details }) {
         <div className="contact-head reveal">
           <h2>Ready to own the sky?</h2>
           <p>
-            Whether it's a drone light show for your product launch or a network of LED billboards across Nigeria — let's design a campaign that makes your brand impossible to ignore.
+            Whether it's a drone light show for your product launch or a network of LED billboards across Nigeria - let's design a campaign that makes your brand impossible to ignore.
           </p>
         </div>
         <div className="contact-grid">
@@ -92,7 +92,7 @@ export default function Contact({ details }) {
             <button className="btn btn-primary" type="submit">
               Submit Campaign Brief
             </button>
-            <p className="form-status">{status}</p>
+            <p className={`form-status ${status ? 'show' : ''}`}>{status}</p>
           </form>
         </div>
       </div>

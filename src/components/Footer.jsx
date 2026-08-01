@@ -42,7 +42,7 @@ export default function Footer({ logo, socials }) {
               <img src={logo} alt="SkyPixels Ltd logo" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
             </div>
             <p>
-              Sky Pixels Ltd is an innovative outdoor advertising and media technology company delivering high-impact brand visibility through digital billboards, aerial drone displays, and experiential marketing — powered by Caverton Helicopters.
+              Sky Pixels Ltd is an innovative outdoor advertising and media technology company delivering high-impact brand visibility through digital billboards, aerial drone displays, and experiential marketing - powered by Caverton Helicopters.
             </p>
             <p className="tagline">We turn the night sky into a canvas.</p>
           </div>
@@ -78,7 +78,7 @@ export default function Footer({ logo, socials }) {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 SkyPixels Ltd. All rights reserved.</span>
+          <span>(c) 2026 SkyPixels Ltd. All rights reserved.</span>
         </div>
       </div>
     </footer>

@@ -36,7 +36,7 @@ export default function Compliance({ cards }) {
         <SectionHeader
           eyebrow="Safety &amp; Responsibility"
           title="Compliance & trust framework"
-          description="Every campaign we run is safe, approved, and environmentally responsible — no exceptions."
+          description="Every campaign we run is safe, approved, and environmentally responsible - no exceptions."
         />
         <div className="compliance-grid">
           {cards.map((card) => (

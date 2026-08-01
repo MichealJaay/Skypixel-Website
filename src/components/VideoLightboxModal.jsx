@@ -23,7 +23,7 @@ export default function VideoLightboxModal({ open, src, onClose }) {
     <div className="video-lightbox open" onClick={onClose}>
       <div className="video-lightbox-inner" onClick={(event) => event.stopPropagation()}>
         <button className="video-lightbox-close" type="button" aria-label="Close video" onClick={onClose}>
-          ×
+          x
         </button>
         <video src={src || ''} controls playsInline autoPlay preload="none" />
       </div>

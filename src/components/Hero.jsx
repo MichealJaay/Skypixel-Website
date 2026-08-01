@@ -1,14 +1,6 @@
 import React from 'react';
 import ActionButton from './ui/ActionButton';
 
-function DownloadIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-      <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
-    </svg>
-  );
-}
-
 export default function Hero({ video, poster }) {
   return (
     <section className="hero">
@@ -19,13 +11,13 @@ export default function Hero({ video, poster }) {
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span className="bar"></span>Powered by Caverton Helicopters · Lagos, Nigeria
+            <span className="bar"></span>Powered by Caverton Helicopters - Lagos, Nigeria
           </div>
           <h1>
             We turn the <span className="accent">night sky</span> into a canvas.
           </h1>
           <p className="lead">
-            Drone light shows, LED digital billboards, and landmark outdoor installations —
+            Drone light shows, LED digital billboards, and landmark outdoor installations -
             delivering high-impact brand visibility across Nigeria and Africa.
           </p>
           <div className="hero-ctas">

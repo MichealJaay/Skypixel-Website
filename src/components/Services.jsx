@@ -41,7 +41,7 @@ export default function Services({ items }) {
         <SectionHeader
           eyebrow="What We Offer"
           title="Four pillars of brand visibility"
-          description="From the sky to the street — a complete outdoor advertising ecosystem built for maximum impact."
+          description="From the sky to the street - a complete outdoor advertising ecosystem built for maximum impact."
         />
         <div className="pillars">
           {items.map((service) => (
