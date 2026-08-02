@@ -86,17 +86,17 @@ export default function Contact({ details }) {
             <div className="form-row">
               <div className="field">
                 <label>Full Name</label>
-                <input type="text" name="name" placeholder="Myra Makanjuola" required />
+                <input type="text" name="name" placeholder="Your name here" required />
               </div>
               <div className="field">
                 <label>Company</label>
-                <input type="text" name="company" placeholder="Myra Airline" />
+                <input type="text" name="company" placeholder="Your company here" />
               </div>
             </div>
             <div className="form-row">
               <div className="field">
                 <label>Email</label>
-                <input type="email" name="email" placeholder="myra@myraairline.com" required />
+                <input type="email" name="email" placeholder="Your email here" required />
               </div>
               <div className="field">
                 <label>Phone</label>
