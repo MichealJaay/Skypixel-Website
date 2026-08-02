@@ -224,7 +224,7 @@ export const complianceCards = [
       'Full compliance with the Lagos State Signage and Advertisement Agency (LASAA), civil aviation authority regulations for drone operations, and all urban planning standards across Nigerian cities.',
   },
   {
-    image: '/images/engineers-blueprints.jpg',
+    image: '/images/safety hat1.jpg',
     alt: 'Engineers blueprints',
     sub: 'Engineering Standards',
     title: 'Structural Safety',
