@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionHeader from './ui/SectionHeader';
+import ImageLightboxModal from './ImageLightboxModal';
 
-function ComplianceCard({ card }) {
+function ComplianceCard({ card, onOpenImage }) {
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      onOpenImage(card);
+    }
+  };
+
   return (
     <div className="compliance-card reveal">
-      <div className="imgph" data-src={card.image}>
+      <div
+        className="imgph imgph-clickable"
+        data-src={card.image}
+        role="button"
+        tabIndex={0}
+        aria-label={`Open full view for ${card.alt}`}
+        onClick={() => onOpenImage(card)}
+        onKeyDown={handleKeyDown}
+      >
         <img
           className="imgph-photo"
           src={card.image}
@@ -30,6 +46,8 @@ function ComplianceCard({ card }) {
 }
 
 export default function Compliance({ cards }) {
+  const [openImage, setOpenImage] = useState(null);
+
   return (
     <section id="compliance" className="alt">
       <div className="wrap">
@@ -40,10 +58,16 @@ export default function Compliance({ cards }) {
         />
         <div className="compliance-grid">
           {cards.map((card) => (
-            <ComplianceCard key={card.title} card={card} />
+            <ComplianceCard key={card.title} card={card} onOpenImage={setOpenImage} />
           ))}
         </div>
       </div>
+      <ImageLightboxModal
+        open={Boolean(openImage)}
+        src={openImage?.image}
+        alt={openImage?.alt}
+        onClose={() => setOpenImage(null)}
+      />
     </section>
   );
 }

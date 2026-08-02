@@ -21,7 +21,7 @@ function TeamCard({ member }) {
 
   return (
     <div
-      className={`team-card reveal ${flipped ? 'flipped' : ''}`}
+      className={`team-card ${flipped ? 'flipped' : ''}`}
       tabIndex={0}
       role="button"
       aria-label={`${member.name}, ${member.role} — click to flip`}

@@ -215,7 +215,7 @@ export const waypoints = [
 
 export const complianceCards = [
   {
-    image: '/images/image.webp',
+    image: '/images/fully approved.jpg',
     alt: 'Compliance documents',
     stamp: 'Fully Approved',
     sub: 'LASAA | Urban Planning | CAA Aviation',
@@ -224,7 +224,7 @@ export const complianceCards = [
       'Full compliance with the Lagos State Signage and Advertisement Agency (LASAA), civil aviation authority regulations for drone operations, and all urban planning standards across Nigerian cities.',
   },
   {
-    image: '/images/event-cover/ucl-trophy.png',
+    image: '/images/engineers-blueprints.jpg',
     alt: 'Engineers blueprints',
     sub: 'Engineering Standards',
     title: 'Structural Safety',
@@ -240,7 +240,7 @@ export const complianceCards = [
       'Energy-efficient LED displays and drone light shows eliminate the need for pyrotechnics - beautiful, zero-emission brand experiences.',
   },
   {
-    image: '/images/event-cover/democracy-day.jpg',
+    image: '/images/ncaa.jpg',
     alt: 'Drone pilot night',
     stamp: 'NCAA Certified',
     sub: 'Certified Pilots | Flight Plans | Insurance',

@@ -526,12 +526,14 @@
         background: var(--blue-dim);
       }
       .team-card {
+        position: relative;
         flex: 0 0 264px;
         max-width: 264px;
         scroll-snap-align: start;
         height: 400px;
         perspective: 1400px;
         cursor: pointer;
+        overflow: hidden;
       }
       .team-inner {
         position: relative;
@@ -539,6 +541,10 @@
         height: 100%;
         transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
         transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        transform-origin: center center;
+        will-change: transform;
+        transform: translateZ(0); 
       }
       .team-card.flipped .team-inner {
         transform: rotateY(180deg);
@@ -546,18 +552,44 @@
       .team-face {
         position: absolute;
         inset: 0;
+        width: 100%;
+        height: 100%;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transform: translateZ(0);
       }
       .team-front {
+        transform: rotateY(0deg);
         display: flex;
         flex-direction: column;
         border: 1px solid var(--line-soft);
+        transform: rotateY(0deg) translateZ(1px);
+        z-index: 2;
+      }
+      .team-back {
+        transform: rotateY(180deg);
+        background: var(--panel-raised);
+        border: 1px solid var(--blue-dim);
+        padding: 26px 24px;
+        display: flex;
+        flex-direction: column;
+        transform: rotateY(180deg) translateZ(1px);
+        z-index: 1;
       }
       .team-front .imgph {
         flex: 1;
         border: none;
         border-bottom: 1px solid var(--line-soft);
+        min-height: 260px; 
+        width: 100%;
+      }
+      .imgph img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
       }
       .team-caption {
         padding: 18px 20px;
@@ -574,14 +606,7 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
       }
-      .team-back {
-        transform: rotateY(180deg);
-        background: var(--panel-raised);
-        border: 1px solid var(--blue-dim);
-        padding: 26px 24px;
-        display: flex;
-        flex-direction: column;
-      }
+      
       .team-back h4 {
         font-size: 17px;
         margin-bottom: 6px;
@@ -864,7 +889,8 @@
       }
 
       /* ---------- Video Lightbox ---------- */
-      .video-lightbox {
+      .video-lightbox,
+      .image-lightbox {
         position: fixed;
         inset: 0;
         z-index: 200;
@@ -874,15 +900,18 @@
         justify-content: center;
         padding: 40px;
       }
-      .video-lightbox.open {
+      .video-lightbox.open,
+      .image-lightbox.open {
         display: flex;
       }
-      .video-lightbox-inner {
+      .video-lightbox-inner,
+      .image-lightbox-inner {
         position: relative;
         width: 100%;
         max-width: 960px;
       }
-      .video-lightbox video {
+      .video-lightbox video,
+      .image-lightbox img {
         width: 100%;
         max-height: 80vh;
         display: block;
@@ -898,15 +927,47 @@
         border: 1px solid var(--line-soft);
         background: var(--panel);
         color: var(--text);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 18px;
       }
+      .imgph-clickable {
+        cursor: pointer;
+      }
+      .imgph-clickable:hover,
+      .imgph-clickable:focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 2px;
+      }
+      .image-lightbox img {
+        max-width: 100%;
+        max-height: calc(80vh - 20px);
+        object-fit: contain;
+        display: block;
+      }
+      
       .video-lightbox-close:hover {
         border-color: var(--blue-dim);
         color: var(--blue);
+      }
+
+      /* Contact icons */
+      .ci-value {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 6px;
+      }
+      .contact-icon {
+        width: 18px;
+        height: 18px;
+        color: var(--muted);
+        flex-shrink: 0;
+        transition: color 0.18s ease, filter 0.18s ease, transform 0.18s ease;
+      }
+      .contact-info-item:hover .contact-icon,
+      .contact-info-item:focus-within .contact-icon,
+      .contact-info-item a:hover .contact-icon {
+        color: var(--blue);
+        transform: translateY(-1px);
+        filter: drop-shadow(0 0 12px rgba(62,155,255,0.22));
       }
 
       /* ---------- Services (Four Pillars) ---------- */
