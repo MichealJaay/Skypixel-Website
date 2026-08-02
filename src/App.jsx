@@ -7,7 +7,6 @@ import Services from './components/Services';
 import WhySection from './components/WhySection';
 import Portfolio from './components/Portfolio';
 import VideoLightboxModal from './components/VideoLightboxModal';
-import Capabilities from './components/Capabilities';
 import Compliance from './components/Compliance';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -20,8 +19,6 @@ import {
   whyFeatures,
   comparisonRows,
   portfolioItems,
-  capabilities,
-  waypoints,
   complianceCards,
   contactDetails,
   footerSocials,
@@ -85,7 +82,6 @@ export default function App() {
         <WhySection features={whyFeatures} comparisonRows={comparisonRows} />
         <Portfolio items={portfolioItems} onOpenVideo={setActiveVideo} />
         <VideoLightboxModal open={Boolean(activeVideo)} src={activeVideo} onClose={() => setActiveVideo(null)} />
-        <Capabilities items={capabilities} waypoints={waypoints} />
         <Compliance cards={complianceCards} />
         <Contact details={contactDetails} />
       </main>

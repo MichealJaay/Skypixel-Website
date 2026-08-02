@@ -20,7 +20,6 @@ export const navLinks = [
   { href: '#services', label: 'Our Services' },
   { href: '#why', label: 'Why SkyPixels' },
   { href: '#portfolio', label: 'Past Work' },
-  { href: '#capabilities', label: 'Capabilities' },
   { href: '#compliance', label: 'Compliance' },
   { href: '#contact', label: 'Contact' },
 ];

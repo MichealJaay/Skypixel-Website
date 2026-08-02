@@ -50,7 +50,6 @@ export default function Footer({ logo, socials }) {
             <div className="footer-col">
               <h5>Navigate</h5>
               <a href="#services">Services</a>
-              <a href="#capabilities">Capabilities</a>
               <a href="#compliance">Compliance</a>
             </div>
             <div className="footer-col">

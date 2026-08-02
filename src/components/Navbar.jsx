@@ -43,19 +43,19 @@ export default function Navbar({ logo, links, cta, open, onToggle, onClose }) {
               {link.label}
             </a>
           ))}
-          {cta && (
-            <ActionButton
-              href={cta.href}
-              variant="primary"
-              className="nav-cta"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={onClose}
-            >
-              {cta.label}
-            </ActionButton>
-          )}
         </div>
+        {cta && (
+          <ActionButton
+            href={cta.href}
+            variant="primary"
+            className="nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+          >
+            {cta.label}
+          </ActionButton>
+        )}
       </nav>
       <div className={`nav-backdrop ${open ? 'open' : ''}`} onClick={onClose} />
     </header>
