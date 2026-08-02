@@ -85,16 +85,16 @@ export default function Portfolio({ items, onOpenVideo }) {
           {items.map((item) => (
             <PortfolioCard key={item.title} item={item} onOpenVideo={onOpenVideo} />
           ))}
-        </div>
-        <div className="portfolio-more reveal">
-          <a
-            className="link-underline"
-            href={youtubeCta.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Watch More
-          </a>
+          <div className="portfolio-more">
+            <ActionButton
+              href={youtubeCta.href}
+              variant="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Watch More
+            </ActionButton>
+          </div>
         </div>
         <div className="scroll-hint reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">

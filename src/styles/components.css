@@ -656,6 +656,15 @@
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
       }
+      .portfolio-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 260px;
+      }
+      .portfolio-more .btn {
+        min-width: 140px;
+      }
       .portfolio-scroll::-webkit-scrollbar {
         height: 6px;
       }
