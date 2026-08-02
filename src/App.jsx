@@ -73,6 +73,7 @@ export default function App() {
         open={mobileOpen}
         onToggle={() => setMobileOpen((value) => !value)}
         onClose={() => setMobileOpen(false)}
+        cta={{ href: SITE.downloadProfile, label: 'Download Profile' }}
       />
       <main>
         <Hero video={SITE.heroVideo} poster={SITE.heroPoster} />

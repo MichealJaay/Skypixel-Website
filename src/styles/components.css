@@ -235,10 +235,12 @@
       .nav-links a:hover {
         color: var(--text);
       }
+      .nav-links .btn {
+        margin-left: 14px;
+      }
       .nav-cta {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        gap: 18px;
       }
       .btn {
         font-family: "Space Grotesk", sans-serif;

@@ -72,38 +72,6 @@ function PortfolioCard({ item, onOpenVideo }) {
   );
 }
 
-function YouTubeCTA() {
-  return (
-    <a
-      className="youtube-cta"
-      href={youtubeCta.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Visit our YouTube channel to see more of our work"
-    >
-      <div className="youtube-cta-bg" aria-hidden="true">
-        <img src={youtubeCta.image} alt="" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
-      </div>
-      <div className="youtube-cta-content">
-        <div className="youtube-cta-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z" />
-          </svg>
-        </div>
-        <span className="youtube-cta-tag">Watch more</span>
-        <h3>YouTube Channel</h3>
-        <p>To see more of our work</p>
-        <span className="youtube-cta-link">
-          Open channel
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </span>
-      </div>
-    </a>
-  );
-}
-
 export default function Portfolio({ items, onOpenVideo }) {
   return (
     <section id="portfolio">
@@ -117,7 +85,16 @@ export default function Portfolio({ items, onOpenVideo }) {
           {items.map((item) => (
             <PortfolioCard key={item.title} item={item} onOpenVideo={onOpenVideo} />
           ))}
-          <YouTubeCTA />
+        </div>
+        <div className="portfolio-more reveal">
+          <a
+            className="link-underline"
+            href={youtubeCta.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch More
+          </a>
         </div>
         <div className="scroll-hint reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">

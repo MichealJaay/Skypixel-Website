@@ -79,16 +79,6 @@ export default function About({ members, downloadProfile }) {
             Click on a team member's photo to read more about them, or download
             the full profile with photos and roles.
           </p>
-          <ActionButton
-            href={downloadProfile}
-            variant="download"
-            className="profile-download-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-            icon={<DownloadIcon />}
-          >
-            Download Profile
-          </ActionButton>
         </div>
 
         <div className="team-grid">

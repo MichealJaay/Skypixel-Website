@@ -1,4 +1,5 @@
 import React from 'react';
+import ActionButton from './ui/ActionButton';
 
 function MenuIcon() {
   return (
@@ -16,7 +17,7 @@ function CloseIcon() {
   );
 }
 
-export default function Navbar({ logo, links, open, onToggle, onClose }) {
+export default function Navbar({ logo, links, cta, open, onToggle, onClose }) {
   return (
     <header>
       <nav className="wrap">
@@ -42,6 +43,18 @@ export default function Navbar({ logo, links, open, onToggle, onClose }) {
               {link.label}
             </a>
           ))}
+          {cta && (
+            <ActionButton
+              href={cta.href}
+              variant="primary"
+              className="nav-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onClose}
+            >
+              {cta.label}
+            </ActionButton>
+          )}
         </div>
       </nav>
       <div className={`nav-backdrop ${open ? 'open' : ''}`} onClick={onClose} />
