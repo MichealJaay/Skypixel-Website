@@ -3,8 +3,7 @@ export const SITE = {
   logo: '/images/image.webp',
   heroVideo: '/videos/Heineken.mp4',
   heroPoster: '/images/SkyPixels Display over water.PNG',
-  downloadProfile:
-    'images/pdf/skypixels-company-profile.pdf'};
+  downloadProfile: '/pdf/skypixels-company-profile.pdf'};
 
 export const tickerItems = [
   'LOS-NG | 6.4281N 3.4219E',
