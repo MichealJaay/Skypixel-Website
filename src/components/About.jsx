@@ -85,7 +85,6 @@ export default function About({ members, downloadProfile }) {
             className="profile-download-btn"
             target="_blank"
             rel="noopener noreferrer"
-            download
             icon={<DownloadIcon />}
           >
             Download Profile

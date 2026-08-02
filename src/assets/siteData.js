@@ -4,8 +4,7 @@ export const SITE = {
   heroVideo: '/videos/Heineken.mp4',
   heroPoster: '/images/SkyPixels Display over water.PNG',
   downloadProfile:
-    'https://drive.google.com/uc?export=download&id=1LDn9LNEpty5x_LRi2HLbycvXv5-YE6k6',
-};
+    'images/pdf/skypixels-company-profile.pdf'};
 
 export const tickerItems = [
   'LOS-NG | 6.4281N 3.4219E',
@@ -78,7 +77,7 @@ export const services = [
     title: 'HD LED Billboards & Smart Signage',
     description:
       'Programmatic and interactive outdoor media platforms with high-definition LED displays in premium locations.',
-    image: '/images/SkyPixels Display over water.PNG',
+    image: '/images/HD LED.jpg',
     alt: 'SkyPixels display over water',
   },
   {
@@ -86,7 +85,7 @@ export const services = [
     title: 'Billboards, Unipoles & Street Furniture',
     description:
       'Large format static structures, bridge panels, wall wraps, and transit advertising platforms.',
-    image: '/images/event-cover/ucl-trophy.png',
+    image: '/images/Billboards.jpg',
     alt: 'Outdoor billboard structure',
   },
   {
@@ -94,7 +93,7 @@ export const services = [
     title: 'Experiential Marketing & Product Launches',
     description:
       'Event-based promotional campaigns and immersive experiential installations designed to drive engagement and brand recall.',
-    image: '/images/event-cover/live-it-100.jpeg',
+    image: '/images/Experimental marketing.jpg',
     alt: 'Brand activation event',
   },
 ];
@@ -170,17 +169,17 @@ export const capabilities = [
     label: 'Drone show - geometric formation',
   },
   {
-    image: '/images/SkyPixels Display over water.PNG',
+    image: '/images/event-cover/Skypixels-photo-nigeriaat64.jpg',
     alt: 'Operators installation',
     label: 'Operators managing installation',
   },
   {
-    image: '/images/event-cover/democracy-day.jpg',
+    image: '/images/event-cover/Skypixels-photo-structuralcompliance2.jpg',
     alt: 'Structural inspection',
     label: 'Structural compliance inspection',
   },
   {
-    image: '/images/event-cover/ucl-trophy.png',
+    image: '/images/Billboards.jpg',
     alt: 'Unipole major road',
     label: 'Unipole billboard on a major road',
   },
@@ -188,25 +187,25 @@ export const capabilities = [
 
 export const waypoints = [
   {
-    code: 'WP-01',
+    code: '01',
     title: 'Campaign Design & Location Analysis',
     description:
       'Data-driven site selection, creative brief development, and visual impact mapping before a single structure is erected.',
   },
   {
-    code: 'WP-02',
+    code: '02',
     title: 'Drone Display Programming',
     description:
       'Specialized expertise in choreographing multi-drone formations - 3D logos, animated sequences, and synchronized sky storytelling.',
   },
   {
-    code: 'WP-03',
+    code: '03',
     title: 'Infrastructure Construction & Maintenance',
     description:
       'Expert fabrication and structural engineering of compliant advertising structures, built to last in Nigerian weather conditions.',
   },
   {
-    code: 'WP-04',
+    code: '04',
     title: 'Performance Monitoring & Reporting',
     description:
       'Real-time campaign tracking, audience exposure data, and detailed post-campaign analytics for every placement.',
@@ -232,7 +231,7 @@ export const complianceCards = [
       'Every billboard, unipole, and installation is designed by structural engineers and built to withstand tropical climate conditions.',
   },
   {
-    image: '/images/SkyPixels Display over water.PNG',
+    image: '/images/',
     alt: 'Eco friendly infrastructure',
     sub: 'Eco-Friendly First',
     title: 'Environmental Responsibility',

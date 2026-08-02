@@ -13,7 +13,7 @@ export default function WhySection({ features, comparisonRows }) {
           <div className="imgph reveal" data-src="/images/event-cover/heineken-cup.png">
             <img
               className="imgph-photo"
-              src="/images/event-cover/heineken-cup.png"
+              src="/images/Skypixels-photo-ngbrands.jpg"
               alt="Drone show corporate event"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
